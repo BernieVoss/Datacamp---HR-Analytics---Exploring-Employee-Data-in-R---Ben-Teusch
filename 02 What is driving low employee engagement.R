@@ -4,7 +4,7 @@ libs <- c( "readr", "dplyr", "ggplot2", "tidyr", "broom" )
 lapply( libs, library, character.only = TRUE )
 
 # Import survey data
-survey <- read_csv("survey_data.csv")
+survey <- read_csv("Data/survey_data.csv")
 
 # Get an overview of the data
 survey |>

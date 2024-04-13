@@ -5,7 +5,7 @@ libs <- c( "readr", "dplyr", "ggplot2" )
 lapply( libs, library, character.only = TRUE )
 
 # Import the recruitment data
-recruitment <- read_csv("recruitment_data.csv")
+recruitment <- read_csv("Data/recruitment_data.csv")
 
 # Look at the first few rows of the dataset
 head(recruitment)

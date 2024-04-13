@@ -4,7 +4,7 @@ libs <- c( "readr", "dplyr", "ggplot2", "tidyr", "broom" )
 lapply( libs, library, character.only = TRUE )
 
 # Import the data
-pay <- read_csv( "fair_pay_data.csv" )
+pay <- read_csv( "Data/fair_pay_data.csv" )
 
 # Get an overview of the data
 summary( pay )
