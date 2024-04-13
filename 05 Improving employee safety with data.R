@@ -105,13 +105,13 @@ head( other_locs )
 # Test whether one year had significantly more overtime hours worked
 # Test whether one year had significantly more disengaged employees
 # Are the results significant?
-significant_overtime <- t.test( overtime_hours ~ year, data = other_locs ) |>
+( significant_overtime <- t.test( overtime_hours ~ year, data = other_locs ) |>
   tidy() |>
-  pull( p.value ) <= 0.05
+  pull( p.value ) <= 0.05 )
 
-significant_disengaged <- chisq.test( other_locs$year, other_locs$disengaged )  |>
+( significant_disengaged <- chisq.test( other_locs$year, other_locs$disengaged )  |>
   tidy() |>
-  pull( p.value ) <= 0.05
+  pull( p.value ) <= 0.05 )
 
 # Use multiple regression to test the impact of year and disengaged on accident rate in Southfield
 regression <- glm( had_accident ~ year + disengaged, family = "binomial", data = southfield_safety )
