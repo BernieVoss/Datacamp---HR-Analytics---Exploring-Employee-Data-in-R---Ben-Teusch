@@ -4,8 +4,8 @@ libs <- c( "readr", "dplyr", "ggplot2", "tidyr", "broom" )
 lapply( libs, library, character.only = TRUE )
 
 # Import the data
-hr_data <- read_csv( "hr_data.csv" )
-performance_data <- read_csv( "performance_data.csv" )
+hr_data <- read_csv( "Data/hr_data.csv" )
+performance_data <- read_csv( "Data/performance_data.csv" )
 
 # Examine the datasets
 summary( hr_data )
